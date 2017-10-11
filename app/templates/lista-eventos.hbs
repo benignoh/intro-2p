@@ -5,9 +5,17 @@
 	{{#each model as |evento|}}
 		{{!--  --}}
 		<li>
-			{{#link-to 'evento-detail' evento.id tagName='button'}}
+			{{!-- {{#link-to 'evento-detail' evento.id tagName='button'}}
 				{{evento.nombre}}
-			{{/link-to}}
+			{{/link-to}} --}}
+			{{!-- <button {{action 'goToEvent'}} {{action 'deleteEvento' allowedKeys="alt"}}>
+				{{evento.nombre}}
+			</button> --}}
+			{{!-- <a href="http://www.google.com" {{action 'goToEvent' preventDefault=false}}>Go to Google</a> --}}
+
+			<span {{action 'deleteEvento'}}>
+				{{evento.nombre}}
+			</span>
 		</li>
 	{{/each}}
 </ul>
