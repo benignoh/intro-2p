@@ -6,8 +6,7 @@ export default Ember.Route.extend({
 		return this.store.find('event',id);
 	},
 	actions: {
-		borrar(texto, code, evento){
-			debugger
+		borrar(){
 			alert('Borrar desde el route');
 		}
 	}
