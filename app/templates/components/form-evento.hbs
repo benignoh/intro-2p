@@ -9,6 +9,24 @@ inicio
 fin
 {{input type='date' value=finEvento}}
 
-<button>Guardar</button>
 
+{{!-- aquí van los campos para llenar las actividades --}}
+<p>Actividades</p>
+
+nombre
+{{input value=nombreActividad}}
+inicio
+{{input type='datetime-local' value=inicioActividad}}
+fin
+{{input type='datetime-local' value=finActividad}}
+<button type="button" {{action 'saveActivity'}}>Añadir actividad</button>
+
+<ul>
+	{{#each actividadesArray as |a|}}
+		<li>{{a.nombre}} - De: {{a.inicio}} a {{a.fin}}</li>
+	{{/each}}
+</ul>
+
+<hr>
+<button>Guardar</button>
 </form>
