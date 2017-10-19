@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('lista-eventos',{path: '/'});
   this.route('evento-detail',{path: 'evento-detail/:event' });
   this.route('nuevo-evento');
+  this.route('registration', {path: 'registration/:event'});
 });
 
 export default Router;

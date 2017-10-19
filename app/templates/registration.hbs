@@ -1,0 +1,55 @@
+<div class="container">
+
+	<h2>Registro</h2>
+
+	{{!-- Datos participante --}}
+	<div class="row">
+		<div class="col-xs-12">
+
+			<div class="form-group">
+				<label>Nombre</label>
+				{{input value=model.participante.nombre class="form-control" type="text" name=""}}
+			</div>
+
+			<div class="form-group">
+				<label>Email</label>
+				{{input value=model.participante.email class="form-control" type="email" name=""}}
+			</div>
+
+			<div class="form-group">
+				<label>Genero</label>
+				{{input checked=model.participante.isMasculino change=(action 'setGender' 1) type="radio" name="genero"}} Masculino
+				{{input checked=model.participante.isFemenino change=(action 'setGender' 2) type="radio" name="genero"}} Femenino
+			</div>
+
+
+		</div>
+	</div>
+
+	<hr>
+
+	{{!-- Datos actividades --}}
+	<div class="row">
+
+		<div id="lista-actividades">
+			{{lista-actividades lista=model.actividades selectActividad=(action 'selectActividad')}}
+		</div>
+
+
+
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
